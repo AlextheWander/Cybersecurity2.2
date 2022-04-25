@@ -1,114 +1,51 @@
-// Const variabler for knapper, spørgsmålsbox samt svar knapper
+const bars = document.getElementById('bars'); // id'et bars til min const variabel "bars"
+const mobileMenu = document.getElementById('mobileMenu'); // id'et mobileMenu til const varibal mobilemenu
 
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainer = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
+bars.addEventListener('click', function () {
+    mobileMenu.classList.toggle('active');     /*addEventlistener i dette tilfælde "click" på const "bars" til Fuctionen
+                                                på "mobileMenu" toggle som viser/fjerner active classen som er designet i css'en  */
+});
 
-let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
-
-function startGame() {
-  startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  questionContainer.classList.remove('hide')
-  setNextQuestion()
-}
-
-function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
-function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
-    if (answer.correct) {
-      button.dataset.correct = answer.correct
+  // Functionen evaluere svaret og viser resultatet til brugeren alt efter om det er rigtigt eller forkert
+  function displayAnswer1() {
+    if (document.getElementById('option-11').checked) {
+      document.getElementById('block-11').style.border = '3px solid limegreen'
+      document.getElementById('result-11').style.color = 'limegreen'
+      document.getElementById('result-11').innerHTML = 'Correct!'
     }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
-}
-
-function resetState() {
-  clearStatusClass(document.body)
-  nextButton.classList.add('hide')
-  while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    if (document.getElementById('option-12').checked) {
+      document.getElementById('block-12').style.border = '3px solid red'
+      document.getElementById('result-12').style.color = 'red'
+      document.getElementById('result-12').innerHTML = 'Incorrect!'
+      showCorrectAnswer1()
+    }
+    if (document.getElementById('option-13').checked) {
+      document.getElementById('block-13').style.border = '3px solid red'
+      document.getElementById('result-13').style.color = 'red'
+      document.getElementById('result-13').innerHTML = 'Incorrect!'
+      showCorrectAnswer1()
+    }
+    if (document.getElementById('option-14').checked) {
+      document.getElementById('block-14').style.border = '3px solid red'
+      document.getElementById('result-14').style.color = 'red'
+      document.getElementById('result-14').innerHTML = 'Incorrect!'
+      showCorrectAnswer1()
+    }
   }
-}
-
-function selectAnswer(e) {
-  const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
-  setStatusClass(document.body, correct)
-  Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
-  })
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide')
-  } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+  // functionen viser linket det viser det rigtige svar ved forkert svar
+  function showCorrectAnswer1() {
+    let showAnswer1 = document.createElement('p')
+    showAnswer1.innerHTML = 'Show Corrent Answer' // Nedenstående er innerstyling i javascript på elementet p^
+    showAnswer1.style.fontSize = '1.75rem'
+    showAnswer1.style.color = 'white'
+    showAnswer1.style.display = 'flex'
+    showAnswer1.style.justifyContent = 'center'
+    document.getElementById('showanswer1').appendChild(showAnswer1)
+    showAnswer1.addEventListener('click', () => {
+      document.getElementById('block-11').style.border = '3px solid limegreen'
+      document.getElementById('result-11').style.color = 'limegreen'
+      document.getElementById('result-11').innerHTML = 'Correct!'
+      document.getElementById('showanswer1').removeChild(showAnswer1)
+    })
   }
-}
-
-function setStatusClass(element, correct) {
-  clearStatusClass(element)
-  if (correct) {
-    element.classList.add('correct')
-  } else {
-    element.classList.add('wrong')
-  }
-}
-
-function clearStatusClass(element) {
-  element.classList.remove('correct')
-  element.classList.remove('wrong')
-}
-
-const questions = [         //Spørgsmål 
-  {
-    question: 'What is 2 + 2?',
-    answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
-    ]
-  },
-  {
-    question: 'Who is the best YouTuber?',
-    answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
-    ]
-  },
-  {
-    question: 'Is web development fun?',
-    answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
-    ]
-  },
-  {
-    question: 'What is 4 * 2?',
-    answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
-    ]
-  }
-]

@@ -1,147 +1,136 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  background-color: black;
+}
+ 
+:root{
+  /*===== Colors =====*/
+  --black-color: #272727;
+  --grey-color: #3B3B3B;
+  --blue-color: #3E9CC1;
+  --dark-color: #000;
+  --text-color: #FFFFFF;
+
+  /*===== Margenes =====*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+}
+ /* === HEADER === */
+
+
+header{
+  position: relative;
+  z-index: 2;
+  background-color: var(--black-color);
+  height: 70px;
+  border-bottom: 8px solid #3E9CC1;
   }
-  
-  :root {
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
+header a{
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin-right: var(--mb-2);
+}
+header a:hover{
+  color: #3E9CC1;
+}
+.logo{
+  font-size: 35px;
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFFFFF;
+}
+.header-inner{
+  max-width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 100px;
   }
+  .nav-link{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  height: 75px;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  font-family: futura-pt-condensed, sans-serif;
+  text-decoration: none;
   
-  body {
-    --hue: var(--hue-neutral);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
   }
-  
-  body.correct {
-    --hue: var(--hue-correct);
+  .mobile-menu{
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 35%;
+  z-index: 5;
+  background-color: var(--black-color);
+    opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
   }
-  
-  body.wrong {
-    --hue: var(--hue-wrong);
+    
+  .nav-menu{
+  display: none;
   }
-  
-  .container {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
+  .active{
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: left;
+  margin-top: 70px;
   }
-  
-  .btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .btn {
-    --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
-    outline: none;
-  }
-  
-  .btn:hover {
-    border-color: black;
-  }
-  
-  .btn.correct {
-    --hue: var(--hue-correct);
-    color: black;
-  }
-  
-  .btn.wrong {
-    --hue: var(--hue-wrong);
-  }
-  
-  .start-btn, .next-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
-  
-  .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* Background Styles Only */
-  
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
-  
-  
-  html {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #DFDFDF;
-  }
-  
-  .side-links {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-  
-  .side-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: white;
-    width: 180px;
-    padding: 10px 0;
-    border-radius: 10px;
-  }
-  
-  .side-link-youtube {
-    background-color: red;
-  }
-  
-  .side-link-twitter {
-    background-color: #1DA1F2;
-  }
-  
-  .side-link-github {
-    background-color: #6e5494;
-  }
-  
-  .side-link-text {
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  
-  .side-link-icon {
-    color: white;
-    font-size: 30px;
-  }
+
+.bx{
+  color: white;
+  font-size: 40px;
+  margin-right: var(--mb-2);
+}
+
+
+/* === QUIZZ === */
+label{
+  color: white;
+  padding: 5px; 
+  font-size: 2.5rem;
+}
+input{
+  transform: scale(1.6); 
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+h3{
+  color: white;
+}
+p{
+  color: white;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.quizz{
+  transform: scale(0.80);
+}
+.quizzdiv{
+  padding: 10px;
+}
