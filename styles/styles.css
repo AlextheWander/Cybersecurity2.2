@@ -1,13 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  background-color: wheat;
+
+html {
+  background-color: white;
 }
- 
-:root{
+
+:root {
   /*===== Colors =====*/
   --black-color: #272727;
   --grey-color: #3B3B3B;
@@ -24,106 +25,121 @@ html{
   --mb-6: 3rem;
 
 }
- /* === HEADER === */
+
+/* === HEADER === */
 
 
-header{
+header {
   position: relative;
   z-index: 2;
-  background-color: var(--black-color);
+  background-color: white;
   height: 70px;
-  border-bottom: 8px solid #3E9CC1;
-  }
-header a{
+  border-bottom: 8px solid #fe8607;
+}
+
+header a {
   text-decoration: none;
   padding: 10px;
-  color: white;
+  color: black;
   font-family: poppins, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
   margin-right: var(--mb-2);
 }
-header a:hover{
+
+header a:hover {
   color: #3E9CC1;
 }
-.logo{
+
+.logo {
   font-size: 35px;
   font-family: interstate, sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #FFFFFF;
+  color: black;
 }
-.header-inner{
+
+.header-inner {
   max-width: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
-  }
-  .nav-link{
-  color: white;
+}
+
+.nav-link {
+  color: black;
   text-decoration: none;
   font-size: 20px;
   height: 75px;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   font-family: futura-pt-condensed, sans-serif;
   text-decoration: none;
-  
-  }
-  .mobile-menu{
+
+}
+
+.mobile-menu {
   position: absolute;
   top: 30px;
   width: 100%;
   height: 35%;
   z-index: 5;
-  background-color: var(--black-color);
-    opacity: 0;
+  background-color: white;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  }
-    
-  .nav-menu{
+}
+
+.nav-menu {
   display: none;
-  }
-  .active{
+}
+
+.active {
   left: 0;
   opacity: 1;
   pointer-events: auto;
   transition: left;
   margin-top: 70px;
-  }
+}
 
-.bx{
-  color: white;
+.bx {
+  color: black;
   font-size: 40px;
   margin-right: var(--mb-2);
 }
 
+.bx-loader-circle {
+  font-size: 15px;
+  margin-right: 0;
+}
+
 /* === MAIN === */
 
-iframe{
-  width:100%;
-  height:210px;
+iframe {
+  width: 100%;
+  height: 210px;
   display: block;
   margin: 0 auto;
 }
 
-h2{
+h3 {
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-2);
-  color: white;
+  color: black;
   font-family: interstate, sans-serif;
   font-weight: 500;
   text-align: center;
+  font-size: 23px;
 }
-p{
-  color: white;
+
+p {
+  color: black;
   font-family: poppins, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -132,51 +148,84 @@ p{
   line-height: 1.5;
   font-size: 19px;
 }
-ul{
 
+ul {
+  padding-left: 20px;
+  padding-right: 20px;
 }
-li{
-  color: white;
+
+li {
+  color: black;
   font-family: poppins, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 19px;
+  list-style-type: none;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .txtover {
- position:relative }
+  position: relative
+}
 
-.txtover figcaption { 
-  position:absolute; 
+.txtover figcaption {
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-family: interstate, sans-serif;
   font-weight: 700;
   font-size: 40px;
- 
+
 }
 
 /* === QUIZZ === */
-label{
-  color: white;
-  padding: 5px; 
-  font-size: 2.5rem;
+label {
+  color: black;
+  padding: 5px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
 }
-input{
-  transform: scale(1.6); 
+
+input {
+  transform: scale(1.6);
   margin-right: 10px;
   vertical-align: middle;
   margin-top: -2px;
 }
 
-h3{
-  color: white;
+.quizz h3 {
+  color: black;
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-size: 23px;
+  text-align: start;
+
 }
 
-.quizz{
+.quizz {
   transform: scale(0.80);
 }
-.quizzdiv{
+
+.quizz p {
+  padding: 0;
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-2)
+}
+
+.quizzdiv {
+  padding: 10px;
+}
+
+.quizz button {
+  border: 3px solid black;
+  font-size: 19px;
+  margin-top: 1.5rem;
+  background: black;
+  color: white;
+  font-family: poppins, sans-serif;
   padding: 10px;
 }
