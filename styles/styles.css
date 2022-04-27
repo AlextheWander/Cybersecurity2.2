@@ -15,6 +15,7 @@ html {
   --blue-color: #3E9CC1;
   --dark-color: #000;
   --text-color: #FFFFFF;
+  --orange-color: #fe8607;
 
   /*===== Margenes =====*/
   --mb-1: .5rem;
@@ -34,7 +35,7 @@ header {
   z-index: 2;
   background-color: white;
   height: 70px;
-  border-bottom: 8px solid #fe8607;
+  border-bottom: 8px solid var(--orange-color);
 }
 
 header a {
@@ -121,14 +122,23 @@ header a:hover {
 
 /* === MAIN === */
 
-iframe {
-  width: 100%;
-  height: 210px;
-  display: block;
-  margin: 0 auto;
+.video-container { 
+  position: relative;
+  padding-bottom: 60%;
+  padding-top: 30px;
+  height: 0; 
+  overflow: hidden; 
 }
+.video-container iframe, .video-container object, .video-container embed {
+   position: absolute;
+   top: 0; 
+   left: 0; 
+   width: 100%;
+   height: 100%;
+   }
 
-h3 {
+
+   h3 {
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-2);
   color: black;
@@ -207,7 +217,7 @@ input {
 }
 
 .quizz {
-  transform: scale(0.80);
+  transform: scale(0.90);
 }
 
 .quizz p {
@@ -221,11 +231,84 @@ input {
 }
 
 .quizz button {
-  border: 3px solid black;
+  border: 3px solid var(--orange-color);
   font-size: 19px;
   margin-top: 1.5rem;
-  background: black;
+  background: var(--orange-color);
   color: white;
   font-family: poppins, sans-serif;
   padding: 10px;
+}
+
+/* === FOOTER === */
+
+footer{
+	display: flex;
+	flex-direction: column;	
+	background-color: var(--orange-color);
+	color: white;
+	font-weight: bold;
+	align-items: center;
+}
+.foot{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.foot h4{
+	margin-top: 10px;
+	padding: 10px;
+  color: black;
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+}
+.foot p{
+	padding: 10px;
+	font-size: var(--font18);
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+footer img{
+	display: none;
+}
+
+.some{
+	display: flex;
+	justify-content: center;
+}
+.bx-lg{
+	padding: 10px;
+	color: black;
+}
+
+.persondata{
+	text-align: center;
+	padding: 10px;
+}
+.persondata a{
+	color: black;
+	font-size: var(--font18);
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.cop{
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 10px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* === MEDEIA Q === */
+
+@media screen and (min-width: 768px) {
+
+  .video-container iframe{
+    padding: 40px;
+  }
+  
 }
