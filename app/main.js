@@ -10,74 +10,74 @@ bars.addEventListener('click', function () {
 // Spørgsmål 1
 
 // Functionen evaluere svaret og viser resultatet til brugeren alt efter om det er rigtigt eller forkert.
-function displayAnswer1() {
-  if (document.getElementById('option-1').checked) {
-    document.getElementById('block-1').style.border = '3px solid limegreen'
-    document.getElementById('result-1').style.color = 'limegreen'
-    document.getElementById('result-1').innerHTML = 'Helt rigtigt!'
+function quizzSvar1() { 
+  if (document.getElementById('option-1').checked) { //input
+    document.getElementById('block-1').style.border = '3px solid limegreen' //div
+    document.getElementById('result-1').style.color = 'limegreen' //Span
+    document.getElementById('result-1').innerHTML = 'Helt rigtigt!' //Span
   }
-  if (document.getElementById('option-2').checked) {
-    document.getElementById('block-2').style.border = '3px solid red'
-    document.getElementById('result-2').style.color = 'red'
-    document.getElementById('result-2').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer1() //Viser functionen showCorrectAnswer når brugeren svare forkert og giver dem mulighed for at se det rigtige svar. 
+  if (document.getElementById('option-2').checked) { //input
+    document.getElementById('block-2').style.border = '3px solid red' //div
+    document.getElementById('result-2').style.color = 'red' //Span
+    document.getElementById('result-2').innerHTML = 'Desværre, det er forkert!' //Span
+    visDetRigtigeSvar1() //Viser functionen visDetRigtigeSvar1 (nedenfor) når brugeren svare forkert og giver dem mulighed for at se det rigtige svar. 
   }
-  if (document.getElementById('option-3').checked) {
-    document.getElementById('block-3').style.border = '3px solid red'
-    document.getElementById('result-3').style.color = 'red'
-    document.getElementById('result-3').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer1()
+  if (document.getElementById('option-3').checked) { //input
+    document.getElementById('block-3').style.border = '3px solid red' //div
+    document.getElementById('result-3').style.color = 'red' //Span
+    document.getElementById('result-3').innerHTML = 'Desværre, det er forkert!' //Span
+    visDetRigtigeSvar1()
   }
-  if (document.getElementById('option-4').checked) {
-    document.getElementById('block-4').style.border = '3px solid red'
-    document.getElementById('result-4').style.color = 'red'
-    document.getElementById('result-4').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer1()
+  if (document.getElementById('option-4').checked) { //input
+    document.getElementById('block-4').style.border = '3px solid red' //div
+    document.getElementById('result-4').style.color = 'red' //Span
+    document.getElementById('result-4').innerHTML = 'Desværre, det er forkert!' //Span
+    visDetRigtigeSvar1()
   }
 }
-// functionen viser linket det viser det rigtige svar ved forkert svar
-function showCorrectAnswer1() {
-  let showAnswer1 = document.createElement('p')
-  showAnswer1.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er innerstyling i javascript på elementet p^
-  showAnswer1.style.fontSize = '19px'
-  showAnswer1.style.fontFamily = 'poppins, sans-serif'
-  showAnswer1.style.color = 'black'
-  showAnswer1.style.display = 'flex'
-  showAnswer1.style.justifyContent = 'center'
-  showAnswer1.style.backgroundColor = 'black'
-  showAnswer1.style.color = 'white'
-  showAnswer1.style.marginLeft = '1rem'
-  showAnswer1.style.marginRight = '1rem'
-  showAnswer1.style.padding = '10px'
-  document.getElementById('showanswer1').appendChild(showAnswer1)
-  showAnswer1.addEventListener('click', () => {
-    document.getElementById('block-1').style.border = '3px solid limegreen'
-    document.getElementById('result-1').style.color = 'limegreen'
-    document.getElementById('result-1').innerHTML = 'Helt rigtigt!'
-    document.getElementById('showanswer1').removeChild(showAnswer1)
+// functionen visDetRigtigeSvar viser knappen til det rigtige svar når der svares forkert 
+function visDetRigtigeSvar1() {
+  let visSvar1 = document.createElement('p') // laver elementet (p) og giver det navnet showAnswer1
+  visSvar1.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er styling til det lavede element (p), det er dog noget bedre at have det i CSS da javascript er langsommere loaded end css.
+  visSvar1.style.fontSize = '19px'
+  visSvar1.style.fontFamily = 'poppins, sans-serif'
+  visSvar1.style.color = 'black'
+  visSvar1.style.display = 'flex'
+  visSvar1.style.justifyContent = 'center'
+  visSvar1.style.backgroundColor = 'black'
+  visSvar1.style.color = 'white'
+  visSvar1.style.marginLeft = '1rem'
+  visSvar1.style.marginRight = '1rem'
+  visSvar1.style.padding = '10px'
+  document.getElementById('vissvar1').appendChild(visSvar1) 
+  visSvar1.addEventListener('click', () => { // addder en EventListener (click) til vores showAnswer1 
+    document.getElementById('block-1').style.border = '3px solid limegreen' //div
+    document.getElementById('result-1').style.color = 'limegreen' //Span
+    document.getElementById('result-1').innerHTML = 'Helt rigtigt!' //Span 
+    document.getElementById('vissvar1').removeChild(visSvar1) // Så når man klikker får man det rigtige svar vist og removeChild fjerner knappen igen.
   })
 }
 
 // Spørgsmål 2
 
-function displayAnswer2() {
+function quizzSvar2() {
   if (document.getElementById('option-5').checked) {
     document.getElementById('block-5').style.border = '3px solid red'
     document.getElementById('result-5').style.color = 'red'
     document.getElementById('result-5').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer2()
+    visDetRigtigeSvar2()
   }
   if (document.getElementById('option-6').checked) {
     document.getElementById('block-6').style.border = '3px solid red'
     document.getElementById('result-6').style.color = 'red'
     document.getElementById('result-6').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer2()
+    visDetRigtigeSvar2()
   }
   if (document.getElementById('option-7').checked) {
     document.getElementById('block-7').style.border = '3px solid red'
     document.getElementById('result-7').style.color = 'red'
     document.getElementById('result-7').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer2()
+    visDetRigtigeSvar2()
   }
   if (document.getElementById('option-8').checked) {
     document.getElementById('block-8').style.border = '3px solid limegreen'
@@ -88,36 +88,36 @@ function displayAnswer2() {
 }
 
 // functionen viser linket det viser det rigtige svar ved forkert svar
-function showCorrectAnswer2() {
-  let showAnswer2 = document.createElement('p')
-  showAnswer2.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er innerstyling i javascript på elementet p^
-  showAnswer2.style.fontSize = '19px'
-  showAnswer2.style.fontFamily = 'poppins, sans-serif'
-  showAnswer2.style.color = 'black'
-  showAnswer2.style.display = 'flex'
-  showAnswer2.style.justifyContent = 'center'
-  showAnswer2.style.backgroundColor = 'black'
-  showAnswer2.style.color = 'white'
-  showAnswer2.style.marginLeft = '1rem'
-  showAnswer2.style.marginRight = '1rem'
-  showAnswer2.style.padding = '10px'
-  document.getElementById('showanswer2').appendChild(showAnswer2)
-  showAnswer2.addEventListener('click', () => {
+function visDetRigtigeSvar2() {
+  let visSvar2 = document.createElement('p') 
+  visSvar2.innerHTML = 'Vis mig det rigtige svar' 
+  visSvar2.style.fontSize = '19px'
+  visSvar2.style.fontFamily = 'poppins, sans-serif'
+  visSvar2.style.color = 'black'
+  visSvar2.style.display = 'flex'
+  visSvar2.style.justifyContent = 'center'
+  visSvar2.style.backgroundColor = 'black'
+  visSvar2.style.color = 'white'
+  visSvar2.style.marginLeft = '1rem'
+  visSvar2.style.marginRight = '1rem'
+  visSvar2.style.padding = '10px'
+  document.getElementById('vissvar2').appendChild(visSvar2)
+  visSvar2.addEventListener('click', () => {
     document.getElementById('block-8').style.border = '3px solid limegreen'
     document.getElementById('result-8').style.color = 'limegreen'
     document.getElementById('result-8').innerHTML = 'Helt rigtigt!'
-    document.getElementById('showanswer2').removeChild(showAnswer2)
+    document.getElementById('vissvar2').removeChild(visSvar2)
   })
 }
 
 // Spørgsmål 3
 
-function displayAnswer3() {
+function quizzSvar3() {
   if (document.getElementById('option-9').checked) {
     document.getElementById('block-9').style.border = '3px solid red'
     document.getElementById('result-9').style.color = 'red'
     document.getElementById('result-9').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer3()
+    visDetRigtigeSvar3()
   }
   if (document.getElementById('option-10').checked) {
     document.getElementById('block-10').style.border = '3px solid limegreen'
@@ -129,53 +129,53 @@ function displayAnswer3() {
     document.getElementById('block-11').style.border = '3px solid red'
     document.getElementById('result-11').style.color = 'red'
     document.getElementById('result-11').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer3()
+    visDetRigtigeSvar3()
   }
   if (document.getElementById('option-12').checked) {
     document.getElementById('block-12').style.border = '3px solid red'
     document.getElementById('result-12').style.color = 'red'
     document.getElementById('result-12').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer3()
+    visDetRigtigeSvar3()
   }
 }
 
 // functionen viser linket det viser det rigtige svar ved forkert svar
-function showCorrectAnswer3() {
-  let showAnswer3 = document.createElement('p')
-  showAnswer3.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er innerstyling i javascript på elementet p^
-  showAnswer3.style.fontSize = '19px'
-  showAnswer3.style.fontFamily = 'poppins, sans-serif'
-  showAnswer3.style.color = 'black'
-  showAnswer3.style.display = 'flex'
-  showAnswer3.style.justifyContent = 'center'
-  showAnswer3.style.backgroundColor = 'black'
-  showAnswer3.style.color = 'white'
-  showAnswer3.style.marginLeft = '1rem'
-  showAnswer3.style.marginRight = '1rem'
-  showAnswer3.style.padding = '10px'
-  document.getElementById('showanswer3').appendChild(showAnswer3)
-  showAnswer3.addEventListener('click', () => {
+function visDetRigtigeSvar3() {
+  let visSvar3 = document.createElement('p')
+  visSvar3.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er innerstyling i javascript på elementet p^
+  visSvar3.style.fontSize = '19px'
+  visSvar3.style.fontFamily = 'poppins, sans-serif'
+  visSvar3.style.color = 'black'
+  visSvar3.style.display = 'flex'
+  visSvar3.style.justifyContent = 'center'
+  visSvar3.style.backgroundColor = 'black'
+  visSvar3.style.color = 'white'
+  visSvar3.style.marginLeft = '1rem'
+  visSvar3.style.marginRight = '1rem'
+  visSvar3.style.padding = '10px'
+  document.getElementById('vissvar3').appendChild(visSvar3)
+  visSvar3.addEventListener('click', () => {
     document.getElementById('block-10').style.border = '3px solid limegreen'
     document.getElementById('result-10').style.color = 'limegreen'
     document.getElementById('result-10').innerHTML = 'Helt rigtigt!'
-    document.getElementById('showanswer3').removeChild(showAnswer3)
+    document.getElementById('vissvar3').removeChild(visSvar3)
   })
 }
 
 // Spørgsmål 4
 
-function displayAnswer4() {
+function quizzSvar4() {
   if (document.getElementById('option-13').checked) {
     document.getElementById('block-13').style.border = '3px solid red'
     document.getElementById('result-13').style.color = 'red'
     document.getElementById('result-13').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer4()
+    visDetRigtigeSvar4()
   }
   if (document.getElementById('option-14').checked) {
     document.getElementById('block-14').style.border = '3px solid red'
     document.getElementById('result-14').style.color = 'red'
     document.getElementById('result-14').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer4()
+    visDetRigtigeSvar4()
   }
   if (document.getElementById('option-15').checked) {
     document.getElementById('block-15').style.border = '3px solid limegreen'
@@ -187,29 +187,29 @@ function displayAnswer4() {
     document.getElementById('block-16').style.border = '3px solid red'
     document.getElementById('result-16').style.color = 'red'
     document.getElementById('result-16').innerHTML = 'Desværre, det er forkert!'
-    showCorrectAnswer4()
+    visDetRigtigeSvar4()
   }
 }
 // functionen viser linket det viser det rigtige svar ved forkert svar
-function showCorrectAnswer4() {
-  let showAnswer4 = document.createElement('p')
-  showAnswer4.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er innerstyling i javascript på elementet p^
-  showAnswer4.style.fontSize = '19px'
-  showAnswer4.style.fontFamily = 'poppins, sans-serif'
-  showAnswer4.style.color = 'black'
-  showAnswer4.style.display = 'flex'
-  showAnswer4.style.justifyContent = 'center'
-  showAnswer4.style.backgroundColor = 'black'
-  showAnswer4.style.color = 'white'
-  showAnswer4.style.marginLeft = '1rem'
-  showAnswer4.style.marginRight = '1rem'
-  showAnswer4.style.padding = '10px'
-  document.getElementById('showanswer4').appendChild(showAnswer4)
-  showAnswer4.addEventListener('click', () => {
+function visDetRigtigeSvar4() {
+  let visSvar4 = document.createElement('p')
+  visSvar4.innerHTML = 'Vis mig det rigtige svar'
+  visSvar4.style.fontSize = '19px'
+  visSvar4.style.fontFamily = 'poppins, sans-serif'
+  visSvar4.style.color = 'black'
+  visSvar4.style.display = 'flex'
+  visSvar4.style.justifyContent = 'center'
+  visSvar4.style.backgroundColor = 'black'
+  visSvar4.style.color = 'white'
+  visSvar4.style.marginLeft = '1rem'
+  visSvar4.style.marginRight = '1rem'
+  visSvar4.style.padding = '10px'
+  document.getElementById('vissvar4').appendChild(visSvar4)
+  visSvar4.addEventListener('click', () => {
     document.getElementById('block-15').style.border = '3px solid limegreen'
     document.getElementById('result-15').style.color = 'limegreen'
     document.getElementById('result-15').innerHTML = 'Helt rigtigt!'
-    document.getElementById('showanswer4').removeChild(showAnswer4)
+    document.getElementById('vissvar4').removeChild(visSvar4)
   })
 }
 
