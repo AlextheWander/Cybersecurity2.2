@@ -41,23 +41,11 @@ function quizzSvar1() {
 // functionen visDetRigtigeSvar viser knappen til det rigtige svar når der svares forkert 
 function visDetRigtigeSvar1() {
   let visSvar1 = document.createElement('p') // laver elementet (p) og giver det navnet showAnswer1
-  visSvar1.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er styling til det lavede element (p), det er dog noget bedre at have det i CSS da javascript er langsommere loaded end css.
-  visSvar1.style.fontSize = '19px'
-  visSvar1.innerHTML = '<p class="pp"> </p>'  //class til css!!!
-  visSvar1.style.fontFamily = 'poppins, sans-serif'
-  visSvar1.style.color = 'black'
-  visSvar1.style.display = 'flex'
-  visSvar1.style.justifyContent = 'center'
-  visSvar1.style.backgroundColor = 'black'
-  visSvar1.style.color = 'white'
-  visSvar1.style.marginLeft = '1rem'
-  visSvar1.style.marginRight = '1rem'
-  visSvar1.style.padding = '10px'
+  visSvar1.innerHTML = '<p class="pp">Vis mig det rigtige svar</p>' 
   document.getElementById('vissvar1').appendChild(visSvar1) 
   visSvar1.addEventListener('click', () => { // addder en EventListener (click) til vores showAnswer1 
     document.getElementById('block-1').style.border = '3px solid limegreen' //div
-    document.getElementById('result-1').style.color = 'limegreen' //Span
-    document.getElementById('result-1').innerHTML = 'Helt rigtigt!' //Span 
+    document.getElementById('result-1').innerHTML = '<p class="prigtigsvar">Helt rigtigt!</p>' //Span
     document.getElementById('vissvar1').removeChild(visSvar1) // Så når man klikker får man det rigtige svar vist og removeChild fjerner knappen igen.
   })  //magen til removechild før fuctionen så remove. ()
 }
