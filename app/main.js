@@ -1,3 +1,5 @@
+//Header Menu active/active 
+
 const bars = document.getElementById('bars'); // id'et bars til min const variabel "bars"
 const mobileMenu = document.getElementById('mobileMenu'); // id'et mobileMenu til const varibal mobilemenu
 
@@ -7,9 +9,10 @@ bars.addEventListener('click', function () {
 });
 
 
+
 // Spørgsmål 1
 
-// Functionen evaluere svaret og viser resultatet til brugeren alt efter om det er rigtigt eller forkert.
+// Functionen qizz viser resultatet til brugeren med farve omkring plus tekst, alt efter om det er rigtigt eller forkert svar.
 function quizzSvar1() { 
   if (document.getElementById('option-1').checked) { //input
     document.getElementById('block-1').style.border = '3px solid limegreen' //div
@@ -40,6 +43,7 @@ function visDetRigtigeSvar1() {
   let visSvar1 = document.createElement('p') // laver elementet (p) og giver det navnet showAnswer1
   visSvar1.innerHTML = 'Vis mig det rigtige svar' // Nedenstående er styling til det lavede element (p), det er dog noget bedre at have det i CSS da javascript er langsommere loaded end css.
   visSvar1.style.fontSize = '19px'
+  visSvar1.innerHTML = '<p class="pp"> </p>'  //class til css!!!
   visSvar1.style.fontFamily = 'poppins, sans-serif'
   visSvar1.style.color = 'black'
   visSvar1.style.display = 'flex'
@@ -55,7 +59,7 @@ function visDetRigtigeSvar1() {
     document.getElementById('result-1').style.color = 'limegreen' //Span
     document.getElementById('result-1').innerHTML = 'Helt rigtigt!' //Span 
     document.getElementById('vissvar1').removeChild(visSvar1) // Så når man klikker får man det rigtige svar vist og removeChild fjerner knappen igen.
-  })
+  })  //magen til removechild før fuctionen så remove. ()
 }
 
 // Spørgsmål 2

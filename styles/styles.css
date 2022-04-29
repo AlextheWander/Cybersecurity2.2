@@ -33,9 +33,9 @@ html {
 header {
   position: relative;
   z-index: 2;
-  background-color: white;
+  background-color: #82C0CC ;
   height: 70px;
-  border-bottom: 8px solid var(--orange-color);
+  border-bottom: 8px solid #742706;
 }
 
 header a {
@@ -122,11 +122,28 @@ header a:hover {
 
 /* === MAIN === */
 
+main{
+  background-color: #82C0CC;
+}
+
 .wrap{
   width: 100%;
   max-width: 900px;
-  margin: 0 auto 2em auto;
+  margin: auto;  
 
+}
+h1{
+  text-align: center;
+  font-family: interstate, sans-serif;
+  font-weight: 700;
+  padding: 30px;
+ 
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  font-size: 65px;
+  justify-content: center;
+  display: flex;
+ 
 }
 
 img{
@@ -190,22 +207,7 @@ li {
   line-height: 1.5;
 }
 
-.txtover {
-  position: relative
-}
 
-.txtover figcaption {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  font-family: interstate, sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  color: white;
-  letter-spacing: 5px;
-
-}
 
 /* === QUIZZ === */
 label {
@@ -248,10 +250,10 @@ input {
 }
 
 .quizz button {
-  border: 3px solid var(--orange-color);
+  border: 3px solid #742706;
   font-size: 1.2em;
   margin-top: 1.5rem;
-  background: var(--orange-color);
+  background: #742706;
   color: white;
   font-family: poppins, sans-serif;
   padding: 10px;
@@ -262,7 +264,7 @@ input {
 footer{
 	display: grid;
 	flex-direction: column;	
-	background-color: var(--orange-color);
+	background-color: #7427068a;
 	color: white;
 	font-weight: bold;
 	align-items: center;
@@ -326,9 +328,6 @@ footer img{
 
 
 
-  .txtover figcaption{
-    font-size: 60px;
-  }
   img{
     height: 600px;
     object-fit: cover;
@@ -362,8 +361,6 @@ footer img{
     justify-content: space-evenly;
   }
 
-  .txtover figcaption{
-    font-size: 80px;
-  }
+ 
 
 }
