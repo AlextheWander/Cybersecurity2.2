@@ -166,3 +166,16 @@ function visDetRigtigeSvar4() {
 }
 
 
+function onButtonClick() {
+  document.getElementById('hvorforInput').className = "show";
+  document.getElementById('submitInput').className = "show1";
+}
+
+function onButtonClick1() {
+  document.getElementById('tusindTak').className = "show2";
+}
+
+function onButtonClick2() {
+  document.getElementById('tusindTak').className = "show2";
+  document.getElementById('submitInput').outerHTML = "";
+}
