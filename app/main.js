@@ -166,16 +166,19 @@ function visDetRigtigeSvar4() {
 }
 
 
+// Functions til "Fandt du siden nyttig?" knapperne 
+
 function onButtonClick() {
-  document.getElementById('hvorforInput').className = "show";
-  document.getElementById('submitInput').className = "show1";
+  document.getElementById('hvorforInput').className = "show"; //Giver classen show
+  document.getElementById('submitInput').className = "show1"; //Giver classen show1
 }
 
 function onButtonClick1() {
-  document.getElementById('tusindTak').className = "show2";
+  document.getElementById('tusindTak').className = "show2"; //giver classen show2 på functionen onbuttonclick1
 }
 
 function onButtonClick2() {
-  document.getElementById('tusindTak').className = "show2";
-  document.getElementById('submitInput').outerHTML = "";
+  document.getElementById('tusindTak').className = "show2"; // Giver tusindtak id classen show2
+  document.getElementById('submitInput').outerHTML = ""; //Fjerner submit og hvorfor input onclick 
+  document.getElementById('hvorforInput').outerHTML = "";
 }

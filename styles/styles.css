@@ -269,7 +269,7 @@ section h4 {
   margin-left: auto;
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-3);
-  background: #742706;
+  background: #642307;
   color: white;
   font-family: poppins, sans-serif;
   text-align: center;
@@ -286,7 +286,7 @@ section h4 {
   margin-left: auto;
   margin-top: var(--mb-3);
   margin-bottom: var(--mb-3);
-  background: #742706;
+  background: #642307;
   color: white;
   font-family: poppins, sans-serif;
   text-align: center;
@@ -304,10 +304,10 @@ section h4 {
 
 .nyttig input {
   transform: scale(0.7);
-  border: 3px solid #742706;
+  border: 3px solid #642307;
   font-size: 1.2em;
   margin-top: 1.5rem;
-  background: #742706;
+  background: #642307;
   color: white;
   font-family: poppins, sans-serif;
   padding: 10px;
@@ -384,10 +384,10 @@ article input {
 }
 
 .quizz button {
-  border: 3px solid #742706;
+  border: 3px solid #642307;
   font-size: 1.2em;
   margin-top: 1.5rem;
-  background: #742706;
+  background: #642307;
   color: white;
   font-family: poppins, sans-serif;
   padding: 10px;
@@ -473,7 +473,7 @@ footer img {
 
 @media screen and (min-width:568px) {
   img {
-    width: 60%;
+    width: 40%;
 
   }
 }
