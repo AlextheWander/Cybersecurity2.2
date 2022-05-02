@@ -186,7 +186,7 @@ img {
 
 
 h3 {
-  margin-top: var(--mb-6);
+  margin-top: var(--mb-4);
   margin-bottom: var(--mb-2);
   color: black;
   font-family: interstate, sans-serif;
@@ -391,6 +391,7 @@ article input {
   color: white;
   font-family: poppins, sans-serif;
   padding: 10px;
+  margin-bottom: var(--mb-4);
 }
 
 /* === FOOTER === */
