@@ -158,8 +158,16 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #7788991c;
   border-radius: 36px;
+}
+
+.img1,
+.img2 {
+  width: 75%;
+}
+
+.img3 {
+  width: 35%;
 }
 
 .video-container {
@@ -213,14 +221,6 @@ p {
   line-height: 1.5;
   font-size: 1.2em;
 }
-
-main p:nth-of-type(1) {
-  margin-top: var(--mb-2);
-}
-
-
-
-
 
 ul {
   padding-left: 20px;
@@ -335,7 +335,7 @@ article input {
   color: black;
   font-family: interstate, sans-serif;
   font-weight: 500;
-  font-size: 25px;
+  font-size: var(--type-heading-h2-font-size-mobile);
   text-align: start;
 
 }
@@ -391,7 +391,7 @@ article input {
   color: white;
   font-family: poppins, sans-serif;
   padding: 10px;
-  margin-bottom: var(--mb-4);
+
 }
 
 /* === FOOTER === */

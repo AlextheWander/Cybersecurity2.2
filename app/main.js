@@ -15,17 +15,16 @@ bars.addEventListener('click', function () {
 // Spørgsmål 1
 
 // Functionen qizz viser resultatet til brugeren med farve omkring plus tekst, alt efter om det er rigtigt eller forkert svar.
-
 function quizzSvar1() {
-  if (document.getElementById('option-1').checked) { //input
+  if (document.getElementById('option-1').checked); { //input
     document.getElementById('block-1').style.border = '3px solid limegreen'; //div
     document.getElementById('result-1').innerHTML = '<p class="rigtigsvar">Helt rigtigt!</p>'; //Span
   }
   if (document.getElementById('option-2').checked) { //input<p class="rigtigsvar">Helt rigtigt!</p>.getElementById('block-2').style.border = '3px solid red' //div
     document.getElementById('block-2').style.border = '3px solid red';
     document.getElementById('result-2').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>'; //Span
-    visDetRigtigeSvar1(); //Viser functionen visDetRigtigeSvar1 (nedenfor) når brugeren svare forkert og giver dem mulighed for at se det rigtige svar. 
-  }
+    visDetRigtigeSvar1();
+  }  //Viser functionen visDetRigtigeSvar1 (nedenfor) når brugeren svare forkert og giver dem mulighed for at se det rigtige svar. 
   if (document.getElementById('option-3').checked) { //input
     document.getElementById('block-3').style.border = '3px solid red'; //div
     document.getElementById('result-3').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>'; //Span
@@ -35,8 +34,10 @@ function quizzSvar1() {
     document.getElementById('block-4').style.border = '3px solid red'; //div
     document.getElementById('result-4').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>'; //Span
     visDetRigtigeSvar1();
+
   }
 }
+
 // functionen visDetRigtigeSvar viser knappen til det rigtige svar når der svares forkert 
 function visDetRigtigeSvar1() {
   let visSvar1 = document.createElement('p');// laver elementet (p) 
