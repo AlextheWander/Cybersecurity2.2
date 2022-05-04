@@ -9,12 +9,10 @@ bars.addEventListener('click', function () {
 });
 
 
-
-
-// https://www.freecodecamp.org/news/multiple-choice-quiz-template/ Quizz
 // Spørgsmål 1
-
+// https://www.freecodecamp.org/news/multiple-choice-quiz-template/ Quizz
 // Functionen qizz viser resultatet til brugeren med farve omkring plus tekst, alt efter om det er rigtigt eller forkert svar.
+
 function quizzSvar1() {
   if (document.getElementById('option-1').checked); { //input
     document.getElementById('block-1').style.border = '3px solid limegreen'; //div
@@ -23,8 +21,8 @@ function quizzSvar1() {
   if (document.getElementById('option-2').checked) { //input<p class="rigtigsvar">Helt rigtigt!</p>.getElementById('block-2').style.border = '3px solid red' //div
     document.getElementById('block-2').style.border = '3px solid red';
     document.getElementById('result-2').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>'; //Span
-    visDetRigtigeSvar1();
-  }  //Viser functionen visDetRigtigeSvar1 (nedenfor) når brugeren svare forkert og giver dem mulighed for at se det rigtige svar. 
+    visDetRigtigeSvar1()  //Viser functionen visDetRigtigeSvar1 (nedenfor) når brugeren svare forkert og giver dem mulighed for at se det rigtige svar. 
+  }  
   if (document.getElementById('option-3').checked) { //input
     document.getElementById('block-3').style.border = '3px solid red'; //div
     document.getElementById('result-3').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>'; //Span
@@ -55,19 +53,16 @@ function visDetRigtigeSvar1() {
 function quizzSvar2() {
   if (document.getElementById('option-5').checked) {
     document.getElementById('block-5').style.border = '3px solid red';
-    document.getElementById('result-5').style.color = 'red';
     document.getElementById('result-5').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>';
     visDetRigtigeSvar2();
   }
   if (document.getElementById('option-6').checked) {
     document.getElementById('block-6').style.border = '3px solid red';
-    document.getElementById('result-6').style.color = 'red';
     document.getElementById('result-6').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>';
     visDetRigtigeSvar2();
   }
   if (document.getElementById('option-7').checked) {
     document.getElementById('block-7').style.border = '3px solid red';
-    document.getElementById('result-7').style.color = 'red';
     document.getElementById('result-7').innerHTML = '<p class="forkertsvar">Desværre, det er forkert!</p>';
     visDetRigtigeSvar2();
   }
