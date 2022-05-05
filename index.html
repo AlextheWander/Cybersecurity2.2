@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="
+  Phishing er en cyberkriminalitet, der narrer dig til at opgive dine kontooplysninger eller kreditkortoplysninger.
+  Lær, hvordan du opdager og undgår phishing-svindel.">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://use.typekit.net/ujw8rjj.css">
   <link rel="stylesheet" href="/styles/styles.css">
   <script src="/app/main.js" defer></script>
 
-  <title>Cyberhjælp - Phishing</title>
+  <title>CYBERHJÆLP - PHISHING</title>
 </head>
 
 <body>
@@ -56,7 +59,7 @@
       <div class="video-container">
 
         <!--Nets video om phising - https://www.youtube.com/watch?v=6kuerSTvV54&t=110s-->
-        <iframe src="https://www.youtube.com/embed/6kuerSTvV54" title="YouTube video player"
+        <iframe src="https://www.youtube.com/embed/6kuerSTvV54" title="Nets video om phishing"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 
@@ -128,7 +131,7 @@
 
         <hr />
 
-        <button type='button' onclick='quizzSvar1()'>Tjek svar</button>
+        <button type='button' id="btn">Tjek svar</button>
       </article>
       <a id='vissvar1'></a>
 
@@ -193,7 +196,7 @@
           <span id='result-7'></span>
         </div>
         <hr />
-        <button type='button' onclick='quizzSvar2()'>Tjek svar</button>
+        <button type='button' id="btn2">Tjek svar</button>
       </article>
       <a id='vissvar2'></a>
 
@@ -250,7 +253,7 @@
           <span id='result-12'></span>
         </div>
         <hr />
-        <button type='button' onclick='quizzSvar3()'>Tjek svar</button>
+        <button type='button' id="btn3">Tjek svar</button>
       </article>
       <a id='vissvar3'></a>
 
@@ -303,7 +306,8 @@
 
       <article class="quizz">
         <h3>Hvad kan du som bruger gøre hvis du bliver bedt om personlige eller følsomme oplysninger?</h3>
-        <a href="https://www.vecteezy.com/free-vector/phishing"><img src="/img/Quizzbillede4.svg" alt="Computer med cyberskjold og e-mail ikoner"></a>
+        <a href="https://www.vecteezy.com/free-vector/phishing"><img src="/img/Quizzbillede4.svg"
+            alt="Computer med cyberskjold og e-mail ikoner"></a>
         <p>Vælg et rigtigt svar</p>
         <hr />
 
@@ -343,7 +347,7 @@
           <span id='result-16'></span>
         </div>
         <hr />
-        <button type='button' onclick='quizzSvar4()'>Tjek svar</button>
+        <button type='button' id="btn4">Tjek svar</button>
       </article>
       <a id='vissvar4'></a>
 
@@ -365,13 +369,13 @@
 
       <form id="form" action="index.html#form">
         <div class=" nyttig">
-          <input type="button" name="answerja" value="Ja" onclick="onButtonClick1()">
-          <input type="button" name="answernej" value="Nej" onclick="onButtonClick()" />
+          <input type="button" name="answerja" id="ja" value="Ja">
+          <input type="button" name="answernej" id="nej" value="Nej" />
 
         </div>
 
         <input class="hide" type="text" id="hvorforInput" placeholder="Hvorfor?" />
-        <button class="hide" type="submit" id="submitInput" onclick="onButtonClick2()">Send Feedback!</button>
+        <button class="hide" type="submit" id="submitInput">Send Feedback!</button>
         <p class="hide" id="tusindTak">Tusind tak!</p>
       </form>
     </section>
